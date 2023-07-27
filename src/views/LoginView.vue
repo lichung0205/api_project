@@ -57,7 +57,7 @@ export default {
           const { token, expired } = res.data;
           console.log(token, expired);
           document.cookie = `hexToken=${token}; expires=${new Date(expired)}`;
-          this.$router.push('/first');
+          this.$router.push('/main/products');
         }
       });
     },

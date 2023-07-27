@@ -17,11 +17,17 @@ const routes = [
   },
   {
     path: '/login',
-    component: () => import('../views/LoginPage.vue'),
+    component: () => import('../views/LoginView.vue'),
   },
   {
-    path: '/first',
-    component: () => import('../views/FirstPage.vue'),
+    path: '/main',
+    component: () => import('../views/MainView.vue'),
+    children: [
+      {
+        path: 'products',
+        component: () => import('../views/ItemView.vue'),
+      },
+    ],
   },
 ];
 
