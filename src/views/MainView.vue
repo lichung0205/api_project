@@ -1,6 +1,9 @@
 <template>
   <Navbar></Navbar>
-  <router-view />
+  <!-- 讓邊邊有一小段距離 -->
+  <div class="container-fluid">
+    <router-view />
+  </div>
 </template>
 
 <script>
